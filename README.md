@@ -1,16 +1,16 @@
-def load_tasks():
+    def load_tasks():
     try:
         with open("tasks.txt", "r") as f:
             return [line.strip() for line in f.readlines()]
     except FileNotFoundError:
         return []
 
-def save_tasks(tasks):
+    def save_tasks(tasks):
     with open("tasks.txt", "w") as f:
         for task in tasks:
             f.write(task + "\n")
 
-def main():
+    def main():
     tasks = load_tasks()
     while True:
         print("\n1. View Tasks\n2. Add Task\n3. Delete Task\n4. Exit")
